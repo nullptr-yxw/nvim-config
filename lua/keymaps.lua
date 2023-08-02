@@ -10,4 +10,5 @@ end
 
 set_nit("<A-b>", ":ToggleTerm<CR>")
 set_nit("<A-n>", ":NvimTreeToggle<CR>")
+set_nit("<A-m>", ":lua require('nvterm.terminal').toggle 'horizontal'<CR>")
 set('t', '<esc>', [[<C-\><C-n>]])

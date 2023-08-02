@@ -1,6 +1,5 @@
 return {
     'akinsho/bufferline.nvim',
-    event = "VeryLazy",
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons',
     enabled = true,
@@ -13,6 +12,7 @@ return {
                     bufferline.style_preset.minimal,
                     bufferline.style_preset.no_italic,
                 },
+                middle_mouse_command = "bdelete! %d",
                 diagnostics = "false",
                 offsets = {
                     {
