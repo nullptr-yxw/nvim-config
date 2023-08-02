@@ -22,13 +22,6 @@ return {
                         text_align = "left",
                         separator = true,
                     },
-                    {
-                        filetype = "neo-tree",
-                        text = "File Explorer",
-                        highlight = "Directory",
-                        text_align = "left",
-                        separator = true,
-                    },
                 },
                 indicator = {
                     style = "none",
