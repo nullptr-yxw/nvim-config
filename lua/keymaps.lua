@@ -1,14 +1,16 @@
 local opts = { noremap = true, silent = true }
-local function set(m, l, r)
+local function map(m, l, r)
+    if r == nil then
+        map("", m, l)
+        map("t", m, l)
+        return
+    end
     vim.api.nvim_set_keymap(m, l, r, opts)
 end
-local function set_nit(l, r)
-    set("n", l, r)
-    set("i", l, "<esc>" .. r)
-    set("t", l, [[<C-\><C-n>]] .. r)
+local function mapall(l, r)
+    map("", l, r)
+    map("t", l, r)
 end
-
-set_nit("<A-b>", ":ToggleTerm<CR>")
-set_nit("<A-n>", ":NvimTreeToggle<CR>")
-set_nit("<A-m>", ":lua require('nvterm.terminal').toggle 'horizontal'<CR>")
-set('t', '<esc>', [[<C-\><C-n>]])
+map("<M-b>", "<Cmd>ToggleTerm <CR>")
+map("<M-n>", "<Cmd>NvimTreeToggle <CR>")
+map('t', '<esc>', [[<C-\><C-n>]])

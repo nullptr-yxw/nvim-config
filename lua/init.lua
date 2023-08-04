@@ -10,7 +10,14 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-require('options')
+
+local opts = require('options').vim_config
+for k, v in pairs(opts) do
+  for m, n in pairs(v) do
+    vim[k][m] = n
+  end
+end
+
 require('keymaps')
 require("lazy").setup({
   spec = { import = "plugins" },

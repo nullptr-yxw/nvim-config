@@ -1,7 +1,10 @@
 return {
     'akinsho/bufferline.nvim',
     version = "*",
-    dependencies = 'nvim-tree/nvim-web-devicons',
+    dependencies = {
+        'nvim-tree/nvim-web-devicons',
+        "famiu/bufdelete.nvim",
+    },
     enabled = true,
     config = function()
         local bufferline = require("bufferline")
@@ -12,7 +15,9 @@ return {
                     bufferline.style_preset.minimal,
                     bufferline.style_preset.no_italic,
                 },
-                middle_mouse_command = "bdelete! %d",
+                middle_mouse_command = "Bdelete! %d",
+                close_command = "Bdelete! %d",
+                right_mouse_command = "vert sbuffer %d",
                 diagnostics = "false",
                 offsets = {
                     {

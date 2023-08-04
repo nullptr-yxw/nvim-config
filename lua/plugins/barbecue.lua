@@ -10,7 +10,7 @@ return {
     opts = {
         theme = {
             dirname = {},
-            normal = { fg = c.LightGray },
+            normal = { fg = c.Yellow },
         },
 
     },
