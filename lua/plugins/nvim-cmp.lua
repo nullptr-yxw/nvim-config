@@ -1,5 +1,5 @@
 return {
-    "hrsh7th/nvim-cmp",
+    "nullptr-yxw/my-nvim-cmp",
     version = "*",
     enabled = true,
     event = "InsertEnter",
@@ -40,7 +40,7 @@ return {
             formatting = {
                 format = lspkind.cmp_format({
                     mode = "symbol", -- do not show text alongside icons
-                    maxwidth = 20,   -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+                    maxwidth = 30,   -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
                     before = function(entry, vim_item)
                         -- Source 显示提示来源
                         --vim_item.menu = "[" .. string.upper(entry.source.name) .. "]"

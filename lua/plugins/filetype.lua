@@ -1,6 +1,5 @@
 return {
     "nathom/filetype.nvim",
-    version = "*",
     lazy = true,
     enabled = true,
     opts = {

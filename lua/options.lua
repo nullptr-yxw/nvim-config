@@ -17,13 +17,15 @@ return {
             termguicolors = true,
             backup = false,
             swapfile = false,
-            clipboard = "unnamedplus",
+            clipboard = "unnamedplus", -- allows neovim to access the system clipboard
             autoread = true,
             wrap = false,
             mouse = "a",
             guicursor = "a:ver25",
             wildmenu = true,
             signcolumn = "yes:1",
+            pumheight = 15,
+            pumwidth = 30,
         },
         g = {
             clipboard = (function()
