@@ -4,6 +4,7 @@ return {
         'nvim-tree/nvim-web-devicons',
         "famiu/bufdelete.nvim",
     },
+    branch = "refactor/improve-offsets",
     enabled = true,
     config = function()
         local bufferline = require("bufferline")

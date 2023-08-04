@@ -2,7 +2,7 @@ local c = require("scheme/colors").get_color()
 return {
     "utilyre/barbecue.nvim",
     name = "barbecue",
-    Lazy = true,
+    lazy = true,
     dependencies = {
         "SmiteshP/nvim-navic",
         "nvim-tree/nvim-web-devicons", -- optional dependency

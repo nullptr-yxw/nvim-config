@@ -10,3 +10,4 @@ end
 map("", "<M-b>", "<Cmd>ToggleTerm<CR>")
 map("", "<M-n>", "<Cmd>NvimTreeToggle<CR>")
 map('t', '<esc>', [[<C-\><C-n>]])
+map("<C-q>", "<esc><Cmd>q<CR>")

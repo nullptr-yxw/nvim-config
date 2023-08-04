@@ -1,2 +1,4 @@
 lazy-lock.json
-plugins/.luarc.json
+lua/.luarc.json
+.vscode/
+.gitignore
