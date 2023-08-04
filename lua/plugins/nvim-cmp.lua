@@ -1,5 +1,5 @@
 return {
-    "nullptr-yxw/my-nvim-cmp",
+    "hrsh7th/nvim-cmp",
     version = "*",
     enabled = true,
     event = "InsertEnter",
