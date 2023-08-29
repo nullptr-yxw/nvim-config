@@ -76,6 +76,7 @@ return {
                         "--query-driver=clang++",
                         "--all-scopes-completion",
                         "--completion-style=detailed",
+                        "--enable-config",
                         --"--fallback-style=file:~/.clangd/.clang-format",
                     }
                 }
@@ -83,14 +84,20 @@ return {
         })
         vim.diagnostic.config({
             underline = false,
-            update_in_insert = false,
-            virtual_text = {
-                spacing = 4,
-                source = "if_many",
-                prefix = "●",
-            },
-            severity_sort = true,
+            --            update_in_insert = false,
+            --            virtual_text = true,
+            --            severity_sort = true,
             signs = false,
         })
+        local signs = {
+            Error = '●',
+            Warn = '●',
+            Info = '●',
+            Hint = '●',
+        }
+        for type, icon in pairs(signs) do
+            local hl = 'DiagnosticSign' .. type
+            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+        end
     end,
 }

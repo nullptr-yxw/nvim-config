@@ -6,7 +6,7 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     cmd = { "TSUpdateSync" },
     config = function()
-        require 'nvim-treesitter.configs'.setup {
+        require('nvim-treesitter.configs').setup({
             ensure_installed = { "c", "cpp", "lua", "rust", "go", "python", "vim", "vimdoc", "query", "ocaml" },
             sync_install = true,
             auto_install = true,
@@ -14,7 +14,7 @@ return {
                 enable = true,
                 additional_vim_regex_highlighting = false,
             },
-        }
+        })
     end,
 
 }

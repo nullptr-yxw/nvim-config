@@ -1,5 +1,10 @@
 local myvsccolors = {}
-myvsccolors.get_color = function()
+
+myvsccolors.lightness = function(str, rate)
+    return (tonumber(str) * rate)
+end
+
+myvsccolors.get_colors = function()
     return {
         None = 'NONE',
         Front = '#D4D4D4',
@@ -68,12 +73,15 @@ myvsccolors.get_color = function()
         LightRed = '#D16969',
         YellowOrange = '#D7BA7D',
         Yellow = '#DCDCAA',
+        GreyYellow = 'B0B088',
         DarkYellow = '#FFD602',
         Pink = '#C586C0',
 
         UiBlue = '#084671',
         UiOrange = '#f28b25',
         PopupHighlightLightBlue = '#d7eafe',
+
+        DarkSalmon = '#E9967A',
     }
 end
 

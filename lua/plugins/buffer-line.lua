@@ -4,7 +4,6 @@ return {
         'nvim-tree/nvim-web-devicons',
         "famiu/bufdelete.nvim",
     },
-    branch = "refactor/improve-offsets",
     enabled = true,
     config = function()
         local bufferline = require("bufferline")
@@ -33,7 +32,8 @@ return {
                 },
                 show_close_icon = true,
                 always_show_bufferline = true,
-                tab_size = 14,
+                tab_size = 15,
+                max_name_length = 20,
             },
             highlights = {
                 buffer_selected = {
