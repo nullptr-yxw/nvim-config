@@ -26,6 +26,7 @@ return {
             signcolumn = "yes:1",
             pumheight = 15,
             pumwidth = 30,
+            cmdheight = 0,
         },
         g = {
             clipboard = (function()

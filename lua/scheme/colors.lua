@@ -41,7 +41,7 @@ myvsccolors.get_colors = function()
         SearchCurrent = '#515c6a',
         Search = '#613315',
 
-        GitAdded = '#81b88b',
+        GkitAdded = '#81b88b',
         GitModified = '#e2c08d',
         GitDeleted = '#c74e39',
         GitRenamed = '#73c991',

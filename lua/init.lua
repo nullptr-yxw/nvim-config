@@ -19,6 +19,7 @@ for k, v in pairs(opts) do
 end
 
 require('keymaps')
+
 require("lazy").setup({
   spec = { import = "plugins" },
   ui = {

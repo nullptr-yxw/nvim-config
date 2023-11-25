@@ -43,6 +43,7 @@ return {
                 "bashls",
                 "clangd",
                 "jdtls",
+                "jsonls",
                 "hls",
                 "cmake",
                 "pyright",
@@ -85,7 +86,7 @@ return {
         vim.diagnostic.config({
             underline = false,
             --            update_in_insert = false,
-            --            virtual_text = true,
+            virtual_text = false,
             --            severity_sort = true,
             signs = false,
         })

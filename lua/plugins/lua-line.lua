@@ -6,5 +6,14 @@ return {
             globalstatus = true,
         },
         theme = 'vscode',
+        extensions = {
+            'toggleterm',
+            'overseer',
+            'mason',
+            'nvim-tree',
+            'quickfix',
+            'trouble',
+            'lazy',
+        }
     },
 }
