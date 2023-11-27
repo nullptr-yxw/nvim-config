@@ -1,34 +1,20 @@
-local functions = {}
+local M = {}
 
-functions.map = function(m, l, r)
+M.map = function(m, l, r)
     local opts = { noremap = true, silent = true }
     if r == nil then
-        vim.api.nvim_set_keymap('', m, l, opts)
-        vim.api.nvim_set_keymap('i', m, l, opts)
-        vim.api.nvim_set_keymap('v', m, l, opts)
-        vim.api.nvim_set_keymap('t', m, l, opts)
+        vim.keymap.set({ 'n', 'v', 'o', 'l', 't' }, m, l, opts)
         return
     end
-    vim.api.nvim_set_keymap(m, l, r, opts)
+    vim.keymap.set(m, l, r, opts)
 end
 
-functions.my_create_autocmds = function(table)
-    local group = nil
-    for k, v in ipairs(table) do
-        if k == "group" then
-            group = k
-            vim.api.nvim_create_augroup(v)
-            break
-        end
-    end
-    for k, v in ipairs(table) do
-        if k ~= "group" then
-            if not v.group then
-                v.group = group
-            end
-            vim.api.nvim_create_autocmd(k, v)
-        end
+M.load_autocmds = function(group, autocmds)
+    vim.api.nvim_create_augroup(group, { clear = false })
+    for event, autocmd in pairs(autocmds) do
+        autocmd.group = group
+        vim.api.nvim_create_autocmd(event, autocmd)
     end
 end
 
-return functions
+return M
