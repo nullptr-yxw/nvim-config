@@ -20,8 +20,9 @@ return {
             end,
         })
         Xmakewatch = terminal:new({
-            cmd = [[xmake build -w && xmake run; xmake watch -- (clear; xmake build && xmake run)]],
-            close_on_exit = false,
+            cmd =
+            [[clear && xmake build -w && xmake run ; xmake watch -q -c "sh -c 'clear && xmake build -w && xmake run'"]],
+            close_on_exit = true,
         })
         map("<F6>", "<cmd>lua Xmakewatch:toggle()<cr>")
     end,

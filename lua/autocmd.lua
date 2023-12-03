@@ -3,11 +3,20 @@ local opt = vim.opt
 local lopt = vim.opt_local
 load_autocmds("native term", {
     TermOpen = {
-        pattern = { "*" },
-        callback = function()
+        callback = function(event_TermOpen)
             lopt.number = false
             lopt.relativenumber = false
-            vim.cmd("normal i")
+            vim.api.nvim_create_autocmd("BufEnter", {
+                buffer = event_TermOpen.buf,
+                callback = function()
+                    vim.cmd("startinsert")
+                end,
+            })
         end,
+    },
+    TermEnter = {
+        callback = function()
+            
+        end
     },
 })
