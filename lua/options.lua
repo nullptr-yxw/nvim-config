@@ -1,7 +1,4 @@
 return {
-    autocmd_config = {
-        auto_save = true,
-    },
     vim_config = {
         opt = {
             modelines = -1,         --禁用模式行

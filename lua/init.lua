@@ -21,6 +21,8 @@ end
 require('keymaps')
 require('autocmd')
 
+vim.api.nvim_create_augroup("lazy", { clear = false, })
+
 require("lazy").setup({
   spec = { import = "plugins" },
   ui = {

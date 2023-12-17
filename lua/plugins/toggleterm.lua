@@ -19,11 +19,16 @@ return {
                 end
             end,
         })
-        Xmakewatch = terminal:new({
-            cmd =
-            [[clear && xmake build -w && xmake run ; xmake watch -q -c "sh -c 'clear && xmake build -w && xmake run'"]],
+        local xmakewatch = function(cmd)
+            return [[clear && ]] .. cmd .. [[; xmake watch -q -c "sh -c 'clear && ]] .. cmd .. [['"]]
+        end
+        Xmakewatchrun = terminal:new({
+            cmd = xmakewatch("xmake build -w && xmake run"),
             close_on_exit = true,
         })
-        map("<F6>", "<cmd>lua Xmakewatch:toggle()<cr>")
+        Xmakewatchasm = terminal:new({
+            cmd = xmakewatch("xmake build -w && objdump -d ")
+        })
+        map("<F6>", "<cmd>lua Xmakewatchrun:toggle()<cr>")
     end,
 }

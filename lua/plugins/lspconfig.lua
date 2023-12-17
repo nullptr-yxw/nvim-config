@@ -57,7 +57,6 @@ return {
             function(server_name)
                 require("lspconfig")[server_name].setup {}
             end,
-            -- Next, you can provide targeted overrides for specific servers.
             ["lua_ls"] = function()
                 lspconfig.lua_ls.setup {
                     settings = {
@@ -78,7 +77,6 @@ return {
                         "--all-scopes-completion",
                         "--completion-style=detailed",
                         "--enable-config",
-                        --"--fallback-style=file:~/.clangd/.clang-format",
                     }
                 }
             end
@@ -90,6 +88,7 @@ return {
             --            severity_sort = true,
             signs = false,
         })
+        --vim.lsp.inlay_hint.enable(0, true)
         local signs = {
             Error = '●',
             Warn = '●',

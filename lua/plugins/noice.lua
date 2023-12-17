@@ -5,7 +5,7 @@ return {
     enabled = true,
     dependencies = {
         "MunifTanjim/nui.nvim",
-        "rcarriga/nvim-notify",
+        --        "rcarriga/nvim-notify",
     },
     opts = {
         views = {
@@ -18,17 +18,26 @@ return {
                 },
             },
         },
-        messages = {
-            enabled = false,
-        },
-        notify = {
-            enabled = false,
-        },
+        --       messages = {
+        --           views = "virtualtext",
+        --           view_error = "virtualtext", -- view for errors
+        --           view_warn = "virtualtext", -- view for warnings
+        --           view_history = "virtualtext", -- view for :messages
+        --           enabled = true,
+        --       },
+        --       notify = {
+        --           views = "virtualtext",
+        --           enabled = true,
+        --       },
         cmdline = {
             format = {
                 checkhealth = {
                     pattern = "^:%s*chec?k?h?e?a?l?t?h?%s+",
                     icon = "",
+                },
+                createnewfile = {
+                    pattern = "^:%s*ed?i?t?%s+",
+                    icon = ""
                 },
             },
         },

@@ -10,7 +10,12 @@ return {
         vim.g.loaded_netrwPlugin = 1
         require("nvim-tree").setup({
             disable_netrw = true,
-            
+            sync_root_with_cwd = true,
+            renderer = {
+                icons = {
+                    git_placement = "after",
+                },
+            },
         })
     end,
 }
