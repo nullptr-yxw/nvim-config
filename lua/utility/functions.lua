@@ -1,12 +1,11 @@
 local M = {}
-
-M.map = function(m, l, r)
-	local opts = { noremap = true, silent = true }
-	if r == nil then
-		vim.keymap.set({ "n", "v", "o", "l", "t" }, m, l, opts)
-		return
+local mopt = { silent = true, noremap = true }
+M.map = function(maps)
+	for mode, bindings in pairs(maps) do
+		for lhs, rhs in pairs(bindings) do
+			vim.keymap.set(mode, lhs, rhs, mopt)
+		end
 	end
-	vim.keymap.set(m, l, r, opts)
 end
 
 M.load_autocmds = function(group, autocmds)

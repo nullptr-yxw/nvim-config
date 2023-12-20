@@ -1,8 +1,5 @@
 return {
 	"folke/noice.nvim",
-	event = "VeryLazy",
-	lazy = true,
-	enabled = true,
 	dependencies = {
 		"MunifTanjim/nui.nvim",
 		--        "rcarriga/nvim-notify",
@@ -17,17 +14,6 @@ return {
 					--    winhighlight = "FloatBorder:SpecialChar",
 				},
 			},
-		},
-		messages = {
-			views = "virtualtext",
-			view_error = "virtualtext", -- view for errors
-			view_warn = "virtualtext", -- view for warnings
-			view_history = "virtualtext", -- view for :messages
-			enabled = false,
-		},
-		notify = {
-			views = "virtualtext",
-			enabled = false,
 		},
 		cmdline = {
 			format = {
