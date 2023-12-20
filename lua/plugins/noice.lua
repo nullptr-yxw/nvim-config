@@ -1,58 +1,58 @@
 return {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    lazy = true,
-    enabled = true,
-    dependencies = {
-        "MunifTanjim/nui.nvim",
-        --        "rcarriga/nvim-notify",
-    },
-    opts = {
-        views = {
-            cmdline_popup = {
-                border = {
-                    style = "single",
-                },
-                win_options = {
-                    --    winhighlight = "FloatBorder:SpecialChar",
-                },
-            },
-        },
-        --       messages = {
-        --           views = "virtualtext",
-        --           view_error = "virtualtext", -- view for errors
-        --           view_warn = "virtualtext", -- view for warnings
-        --           view_history = "virtualtext", -- view for :messages
-        --           enabled = true,
-        --       },
-        --       notify = {
-        --           views = "virtualtext",
-        --           enabled = true,
-        --       },
-        cmdline = {
-            format = {
-                checkhealth = {
-                    pattern = "^:%s*chec?k?h?e?a?l?t?h?%s+",
-                    icon = "",
-                },
-                createnewfile = {
-                    pattern = "^:%s*ed?i?t?%s+",
-                    icon = ""
-                },
-            },
-        },
-        lsp = {
-            override = {
-                ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-                ["vim.lsp.util.stylize_markdown"] = true,
-                ["cmp.entry.get_documentation"] = true,
-            },
-        },
-        presets = {
-            bottom_search = true,
-            command_palette = true,
-            long_message_to_split = true,
-            inc_rename = true,
-        },
-    },
+	"folke/noice.nvim",
+	event = "VeryLazy",
+	lazy = true,
+	enabled = true,
+	dependencies = {
+		"MunifTanjim/nui.nvim",
+		--        "rcarriga/nvim-notify",
+	},
+	opts = {
+		views = {
+			cmdline_popup = {
+				border = {
+					style = "single",
+				},
+				win_options = {
+					--    winhighlight = "FloatBorder:SpecialChar",
+				},
+			},
+		},
+		messages = {
+			views = "virtualtext",
+			view_error = "virtualtext", -- view for errors
+			view_warn = "virtualtext", -- view for warnings
+			view_history = "virtualtext", -- view for :messages
+			enabled = false,
+		},
+		notify = {
+			views = "virtualtext",
+			enabled = false,
+		},
+		cmdline = {
+			format = {
+				checkhealth = {
+					pattern = "^:%s*chec?k?h?e?a?l?t?h?%s+",
+					icon = "",
+				},
+				createnewfile = {
+					pattern = "^:%s*ed?i?t?%s+",
+					icon = "",
+				},
+			},
+		},
+		lsp = {
+			override = {
+				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+				["vim.lsp.util.stylize_markdown"] = true,
+				["cmp.entry.get_documentation"] = true,
+			},
+		},
+		presets = {
+			bottom_search = true,
+			command_palette = true,
+			long_message_to_split = true,
+			inc_rename = true,
+		},
+	},
 }

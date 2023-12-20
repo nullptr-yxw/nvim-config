@@ -82,6 +82,8 @@ myvsccolors.get_colors = function()
         PopupHighlightLightBlue = '#d7eafe',
 
         DarkSalmon = '#E9967A',
+        DoderBlue = '#1E90FF',
+        MediumTurquoise = '#48D1CC',
     }
 end
 
