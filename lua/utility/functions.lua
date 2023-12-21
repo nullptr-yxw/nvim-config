@@ -16,4 +16,11 @@ M.load_autocmds = function(group, autocmds)
 	end
 end
 
+
+M.start_config = function()
+	vim.api.nvim_set_current_dir(vim.fn.stdpath("config"))
+	local fb_picker = require "telescope".extensions.file_browser
+    fb_picker.file_browser({})
+end
+
 return M

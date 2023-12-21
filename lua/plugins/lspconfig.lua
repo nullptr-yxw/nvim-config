@@ -1,7 +1,6 @@
 return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
-    enabled = true,
     dependencies = {
         {
             "folke/neoconf.nvim", cmd = "Neoconf", config = true,

@@ -18,13 +18,15 @@ M.init = function()
             border = "rounded",
         },
         defaults = {
-            lazy = true,
+            lazy = false,
         },
         performance = {
             disabled_plugins = {
                 "edgy",
                 "overseer",
                 "rainbow-delimiters",
+                "indent-blankline",
+                "noice",
             },
         }
     })

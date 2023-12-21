@@ -8,15 +8,17 @@ local M = {
             neovide_padding_bottom = 13,
             neovide_padding_right = 13,
             neovide_padding_left = 13,
+            neovide_theme = "dark",
+            neovide_fullscreen = true,
         }
     },
 }
 M.init = function()
     if not vim.g.neovide then return end
-	for k, v in pairs(M.config) do
-		for m, n in pairs(v) do
-			vim[k][m] = n
-		end
-	end
+    for k, v in pairs(M.config) do
+        for m, n in pairs(v) do
+            vim[k][m] = n
+        end
+    end
 end
 return M

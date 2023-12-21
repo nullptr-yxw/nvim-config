@@ -8,24 +8,18 @@ return {
     pin = true,
     config = function()
         local dashboard = require("dashboard")
-        function Test()
-            print("hello world")
-            dashboard:instance({ theme = "hyper" })
-        end
-
         require('dashboard').setup({
             theme = "doom",
             hide = {
                 statusline = true,
             },
             config = {
+                header = require("logo.girl").get_logo(),
                 -- stylua: ignore
                 center = {
                     { action = "Telescope file_browser", desc = " Find files", icon = " ", key = "f" },
                     { action = "Telescope oldfiles", desc = " Recent files", icon = " ", key = "r" },
-                    { action = "Telescope live_grep", desc = " Find text", icon = " ", key = "g" },
-                    { action = "lua Test()", desc = " Test", icon = " ", key = "g" },
-                    { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config", icon = " ", key = "c" },
+                    { action = "Config", desc = " Config", icon = " ", key = "c" },
                     { action = 'lua require("persistence").load()', desc = " Restore Session", icon = " ", key = "s" },
                     { action = "ToggleTerm direction=tab", desc = " Terminal", icon = " ", key = "t" },
                     { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
@@ -34,7 +28,7 @@ return {
                 footer = function()
                     local stats = require("lazy").stats()
                     local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-                    return { "⚡ Neovim loaded " ..
+                    return { "", "临浚壑而怨遥，登崇岫而伤远", "", "⚡ Neovim loaded " ..
                     stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
                 end,
             },

@@ -5,3 +5,6 @@ usercmd("Vbh", function(t)
 	local str = "vert help " .. t.args .. " | setlocal buflisted"
 	vim.api.nvim_exec2(str, {})
 end, { nargs = "?" })
+usercmd("Config", function()
+	require("utility.functions").start_config()
+end, { nargs = 0 })
