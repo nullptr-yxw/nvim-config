@@ -84,6 +84,9 @@ myvsccolors.get_colors = function()
         DarkSalmon = '#E9967A',
         DoderBlue = '#1E90FF',
         MediumTurquoise = '#48D1CC',
+        MintCream = '#F5FFFA',
+        Turquoise = '#40E0D0',
+        LawnGreen = '#7CFC00',
     }
 end
 

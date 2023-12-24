@@ -35,8 +35,8 @@ return {
         })
         map({
             [{'n', 't'}] = {
-                ["<F6>"] = [[<cmd>lua Xmakewatchrun()<cr>]],
-                ["<F5>"] = [[<cmd>lua Xmakerun()<cr>]],
+                ["<F6>"] = [[<cmd>lua Xmakewatchrun:toggle()<cr>]],
+                ["<F5>"] = [[<cmd>lua Xmakerun:toggle()<cr>]],
             },
         })
     end,

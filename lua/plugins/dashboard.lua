@@ -5,7 +5,6 @@ return {
         "nvim-telescope/telescope-file-browser.nvim",
     },
     event = 'VimEnter',
-    pin = true,
     config = function()
         local dashboard = require("dashboard")
         require('dashboard').setup({
