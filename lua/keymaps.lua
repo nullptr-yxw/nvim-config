@@ -11,6 +11,7 @@ map({
         ["<a-m>"] = [[<cmd>ToggleTerm direction=tab<cr>]],
         ["<a-n>"] = [[<cmd>ToggleTerm<cr>]],
         ["<a-b>"] = [[<cmd>NvimTreeToggle<cr>]],
+        ["<a-v>"] = [[<c-v>]],
     },
 })
 
