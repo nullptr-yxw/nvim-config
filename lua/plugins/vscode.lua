@@ -21,5 +21,6 @@ return {
                 NvimTreeRootFolder = { fg = nil },
             }
         })
+        vim.cmd([[colorscheme vscode]])
     end,
 }
