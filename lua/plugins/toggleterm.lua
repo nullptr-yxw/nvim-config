@@ -1,5 +1,5 @@
 return {
-    'akinsho/toggleterm.nvim',
+    "akinsho/toggleterm.nvim",
     enabled = true,
     config = function()
         local terminal = require("toggleterm.terminal").Terminal
@@ -20,7 +20,11 @@ return {
             end,
         })
         local xmakewatch = function(cmd)
-            return [[clear && ]] .. cmd .. [[; xmake watch -q -c "sh -c 'clear && ]] .. cmd .. [['"]]
+            return [[clear && ]]
+                .. cmd
+                .. [[; xmake watch -q -c "sh -c 'clear && ]]
+                .. cmd
+                .. [['"]]
         end
         Xmakerun = terminal:new({
             cmd = [[xmake build -w && xmake run]],
@@ -31,10 +35,10 @@ return {
             close_on_exit = true,
         })
         Xmakewatchasm = terminal:new({
-            cmd = xmakewatch("xmake build -w && objdump -d ")
+            cmd = xmakewatch("xmake build -w && objdump -d "),
         })
         map({
-            [{ 'n', 't' }] = {
+            [{ "n", "t" }] = {
                 ["<F6>"] = [[<cmd>lua Xmakewatchrun:toggle()<cr>]],
                 ["<F5>"] = [[<cmd>lua Xmakerun:toggle()<cr>]],
             },

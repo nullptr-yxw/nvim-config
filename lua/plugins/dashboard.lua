@@ -1,13 +1,13 @@
 return {
-    'glepnir/dashboard-nvim',
+    "glepnir/dashboard-nvim",
     dependencies = {
-        'nvim-telescope/telescope.nvim',
+        "nvim-telescope/telescope.nvim",
         "nvim-telescope/telescope-file-browser.nvim",
     },
-    event = 'VimEnter',
+    event = "VimEnter",
     config = function()
         local dashboard = require("dashboard")
-        require('dashboard').setup({
+        require("dashboard").setup({
             theme = "doom",
             hide = {
                 statusline = true,

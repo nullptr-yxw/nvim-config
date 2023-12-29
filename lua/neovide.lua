@@ -13,7 +13,7 @@ local M = {
             neovide_theme = "dark",
             neovide_fullscreen = true,
             neovide_remember_window_size = false,
-        }
+        },
     },
     mappings = {
         [{ "", "l", "t" }] = {
@@ -25,12 +25,12 @@ local M = {
             end,
         },
     },
-    autocmds = {
-
-    },
+    autocmds = {},
 }
 M.init = function()
-    if not vim.g.neovide then return end
+    if not vim.g.neovide then
+        return
+    end
     for k, v in pairs(M.config) do
         for m, n in pairs(v) do
             vim[k][m] = n

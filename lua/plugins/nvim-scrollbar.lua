@@ -1,5 +1,5 @@
 return {
-    'petertriho/nvim-scrollbar',
+    "petertriho/nvim-scrollbar",
     dependencies = "kevinhwang91/nvim-hlslens",
     config = function()
         require("scrollbar").setup({

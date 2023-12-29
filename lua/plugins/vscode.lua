@@ -2,8 +2,8 @@ return {
     "Mofiqul/vscode.nvim",
     priority = 1000,
     config = function()
-        local c = require('theme.colors').get_colors()
-        require('vscode').setup({
+        local c = require("theme.colors").get_colors()
+        require("vscode").setup({
             -- Enable transparent background
             transparent = false,
             -- Enable italic comment
@@ -13,7 +13,7 @@ return {
             group_overrides = {
                 NonText = { fg = c.Back },
                 Keyword = { fg = c.Blue },
-                ['@keyword'] = { fg = c.Blue },
+                ["@keyword"] = { fg = c.Blue },
                 NvimTreeNormal = { fg = c.Yellow },
                 NvimTreeFolderName = { fg = c.LightBlue },
                 NvimTreeOpenedFolderName = { link = "NvimTreeFolderName" },
@@ -21,7 +21,7 @@ return {
                 WinBar = { fg = c.Gray, bg = c.Back },
                 WinBarNC = { fg = c.Gray, bg = c.Back },
                 DashboardFooter = { fg = c.Blue, bg = c.Back, italic = true },
-            }
+            },
         })
         vim.cmd([[colorscheme vscode]])
     end,

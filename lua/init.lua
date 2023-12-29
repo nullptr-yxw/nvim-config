@@ -3,7 +3,7 @@ require("keymaps")
 require("autocmd")
 require("usercmd")
 if vim.g.neovide then
-	require("neovide").init()
+    require("neovide").init()
 end
 require("lazynvim").init()
 if vim.fn.has("linux") then

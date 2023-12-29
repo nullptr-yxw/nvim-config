@@ -3,10 +3,13 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
         {
-            "folke/neoconf.nvim", cmd = "Neoconf", config = true,
+            "folke/neoconf.nvim",
+            cmd = "Neoconf",
+            config = true,
         },
         {
-            "folke/neodev.nvim", opts = {},
+            "folke/neodev.nvim",
+            opts = {},
         },
         "neovim/nvim-lspconfig",
     },
@@ -32,9 +35,9 @@ return {
                 icons = {
                     package_installed = "✓",
                     package_pending = "➜",
-                    package_uninstalled = "✗"
-                }
-            }
+                    package_uninstalled = "✗",
+                },
+            },
         })
         require("mason-lspconfig").setup({
             ensure_installed = {
@@ -50,25 +53,25 @@ return {
             },
         })
 
-        local lspconfig = require('lspconfig')
+        local lspconfig = require("lspconfig")
 
         require("mason-lspconfig").setup_handlers({
             function(server_name)
-                require("lspconfig")[server_name].setup {}
+                require("lspconfig")[server_name].setup({})
             end,
             ["lua_ls"] = function()
-                lspconfig.lua_ls.setup {
+                lspconfig.lua_ls.setup({
                     settings = {
                         Lua = {
                             diagnostics = {
-                                globals = { "vim" }
-                            }
-                        }
-                    }
-                }
+                                globals = { "vim" },
+                            },
+                        },
+                    },
+                })
             end,
             ["clangd"] = function()
-                lspconfig.clangd.setup {
+                lspconfig.clangd.setup({
                     cmd = {
                         "clangd",
                         "--header-insertion=never",
@@ -76,9 +79,9 @@ return {
                         "--all-scopes-completion",
                         "--completion-style=detailed",
                         "--enable-config",
-                    }
-                }
-            end
+                    },
+                })
+            end,
         })
         vim.diagnostic.config({
             underline = false,
@@ -89,13 +92,13 @@ return {
         })
         --vim.lsp.inlay_hint.enable(0, true)
         local signs = {
-            Error = '●',
-            Warn = '●',
-            Info = '●',
-            Hint = '●',
+            Error = "●",
+            Warn = "●",
+            Info = "●",
+            Hint = "●",
         }
         for type, icon in pairs(signs) do
-            local hl = 'DiagnosticSign' .. type
+            local hl = "DiagnosticSign" .. type
             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
         end
     end,

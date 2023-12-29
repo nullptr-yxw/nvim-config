@@ -1,6 +1,6 @@
 return {
     "williamboman/mason-lspconfig.nvim",
-    version = '*',
+    version = "*",
     enabled = true,
     dependencies = {
         "williamboman/mason.nvim",

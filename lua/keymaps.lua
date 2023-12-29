@@ -3,11 +3,11 @@ map({
     t = {
         ["<esc>"] = [[<C-\><C-n>]],
     },
-    [{ '', 'l', 't' }] = {
+    [{ "", "l", "t" }] = {
         ["<c-q>"] = [[<cmd>wa<cr><cmd>qa!<cr>]],
         ["<c-s>"] = [[<cmd>w<cr>]],
     },
-    [{ 'n', 't' }] = {
+    [{ "n", "t" }] = {
         ["<a-m>"] = [[<cmd>ToggleTerm direction=tab<cr>]],
         ["<a-n>"] = [[<cmd>ToggleTerm<cr>]],
         ["<a-b>"] = [[<cmd>NvimTreeToggle<cr>]],
