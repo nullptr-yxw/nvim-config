@@ -1,6 +1,6 @@
-local au = require("utility.functions").load_autocmds
+local au = require("Utils.functions").load_autocmds
 local terminal = require("toggleterm.terminal").Terminal
-local map = require("utility.functions").map
+local map = require("Utils.functions").map
 local M = {}
 M.next_id = function()
 	local all = M.get_all(true)

@@ -1,4 +1,4 @@
-local map = require("utility.functions").map
+local map = require("Utils.functions").map
 map({
     t = {
         ["<esc>"] = [[<C-\><C-n>]],

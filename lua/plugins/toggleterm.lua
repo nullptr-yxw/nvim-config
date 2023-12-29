@@ -3,7 +3,7 @@ return {
     enabled = true,
     config = function()
         local terminal = require("toggleterm.terminal").Terminal
-        local map = require("utility.functions").map
+        local map = require("Utils.functions").map
         require("toggleterm").setup({
             shade_terminals = false,
             persist_size = false,
@@ -34,7 +34,7 @@ return {
             cmd = xmakewatch("xmake build -w && objdump -d ")
         })
         map({
-            [{'n', 't'}] = {
+            [{ 'n', 't' }] = {
                 ["<F6>"] = [[<cmd>lua Xmakewatchrun:toggle()<cr>]],
                 ["<F5>"] = [[<cmd>lua Xmakerun:toggle()<cr>]],
             },

@@ -13,13 +13,16 @@ return {
 			"GoogleKeepMenu",
 			"NvimTree",
 			"spectre_panel",
-            "sagaoutline",
+			"sagaoutline",
 		}
 		local pin = function(bufnr)
 			local buftype = vim.bo[bufnr].buftype
 			local filetype = vim.bo[bufnr].filetype
 			local bufname = vim.api.nvim_buf_get_name(bufnr)
-			if buftype == "help" or buftype == "quickfix" then
+			if filetype == "TelescopePrompt" then
+				-- Ignore telescope prompt to avoid bad interactions
+				return nil
+			elseif buftype == "help" or buftype == "quickfix" then
 				return "buftype"
 			elseif buftype == "prompt" or vim.startswith(bufname, "DAP ") then
 				return "bufnr"
@@ -39,8 +42,8 @@ return {
 				end
 			end
 		end
-        require("stickybuf").setup({
-            get_auto_pin = pin,
-        })
+		require("stickybuf").setup({
+			get_auto_pin = pin,
+		})
 	end,
 }

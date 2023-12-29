@@ -1,4 +1,4 @@
-local map = require("utility.functions").map
+local map = require("Utils.functions").map
 local M = {
     config = {
         o = {
@@ -9,6 +9,7 @@ local M = {
             neovide_padding_bottom = 13,
             neovide_padding_right = 13,
             neovide_padding_left = 13,
+            neovide_scroll_animation_length = 0.3,
             neovide_theme = "dark",
             neovide_fullscreen = true,
             neovide_remember_window_size = false,
@@ -23,7 +24,10 @@ local M = {
                 vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen
             end,
         },
-    }
+    },
+    autocmds = {
+
+    },
 }
 M.init = function()
     if not vim.g.neovide then return end

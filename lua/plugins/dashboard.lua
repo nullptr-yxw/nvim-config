@@ -13,7 +13,7 @@ return {
                 statusline = true,
             },
             config = {
-                header = require("logo.girl").get_logo(),
+                header = require("logo").get_header("girl_1"),
                 -- stylua: ignore
                 center = {
                     { action = "Telescope file_browser", desc = " Find files", icon = " ", key = "f" },
@@ -24,12 +24,7 @@ return {
                     { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
                     { action = "qa", desc = " Quit", icon = " ", key = "q" },
                 },
-                footer = function()
-                    local stats = require("lazy").stats()
-                    local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-                    return { "", "临浚壑而怨遥，登崇岫而伤远", "", "⚡ Neovim loaded " ..
-                    stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
-                end,
+                footer = require("logo").get_poems(1),
             },
         })
     end,

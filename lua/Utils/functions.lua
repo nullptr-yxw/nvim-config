@@ -26,4 +26,6 @@ M.start_config = function()
 	vim.api.nvim_set_current_dir(config_path)
 end
 
+
+
 return M

@@ -18,6 +18,9 @@ return {
                 NvimTreeFolderName = { fg = c.LightBlue },
                 NvimTreeOpenedFolderName = { link = "NvimTreeFolderName" },
                 NvimTreeRootFolder = { fg = nil },
+                WinBar = { fg = c.Gray, bg = c.Back },
+                WinBarNC = { fg = c.Gray, bg = c.Back },
+                DashboardFooter = { fg = c.Blue, bg = c.Back, italic = true },
             }
         })
         vim.cmd([[colorscheme vscode]])
