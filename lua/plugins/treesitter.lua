@@ -1,5 +1,6 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    version = "*",
     lazy = true,
     enabled = true,
     build = ":TSUpdate",
@@ -18,6 +19,7 @@ return {
                 "vimdoc",
                 "query",
                 "ocaml",
+                "zig",
             },
             sync_install = true,
             auto_install = true,

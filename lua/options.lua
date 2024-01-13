@@ -1,6 +1,6 @@
 local M = {}
 
-M.vim_config = {
+M.options = {
     opt = {
         modelines = -1, --禁用模式行
         number = true, --显示数字
@@ -46,7 +46,7 @@ M.vim_config = {
     },
 }
 M.init = function()
-    for k, v in pairs(M.vim_config) do
+    for k, v in pairs(M.options) do
         for m, n in pairs(v) do
             vim[k][m] = n
         end

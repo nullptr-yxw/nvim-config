@@ -9,6 +9,8 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "onsails/lspkind.nvim",
+        "KadoBOT/cmp-plugins",
+        --"yehuohan/cmp-im", -- for Chinese input
     },
     opts = function()
         vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
@@ -35,8 +37,10 @@ return {
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
                 { name = "luasnip" },
-                --{ name = "buffer" },
+                { name = "buffer" },
                 { name = "path" },
+                { name = "plugins"},
+                --{ name = "im" },
             }),
             formatting = {
                 format = lspkind.cmp_format({

@@ -24,6 +24,7 @@ M.init = function()
                         "auto-save.nvim",
                         "bufdelete.nvim",
                         "bufferline.nvim",
+                        "clangd_extensions.nvim",
                         "cmake-tools.nvim",
                         "Comment.nvim",
                         "dashboard-nvim",

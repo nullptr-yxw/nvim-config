@@ -1,18 +1,6 @@
 return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-        {
-            "folke/neoconf.nvim",
-            cmd = "Neoconf",
-            config = true,
-        },
-        {
-            "folke/neodev.nvim",
-            opts = {},
-        },
-        "neovim/nvim-lspconfig",
-    },
     opts = {
         -- add any global capabilities here
         capabilities = {},
@@ -63,9 +51,12 @@ return {
                 lspconfig.lua_ls.setup({
                     settings = {
                         Lua = {
-                            diagnostics = {
-                                globals = { "vim" },
+                            workspace = {
+                                library = vim.api.nvim_get_runtime_file('', true),
                             },
+                            --diagnostics = {
+                            --    globals = { "vim" },
+                            --},
                         },
                     },
                 })
@@ -86,7 +77,7 @@ return {
         vim.diagnostic.config({
             underline = false,
             --            update_in_insert = false,
-            virtual_text = false,
+            virtual_text = true,
             --            severity_sort = true,
             signs = false,
         })

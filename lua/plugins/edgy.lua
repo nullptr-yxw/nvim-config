@@ -30,6 +30,9 @@ return {
         left = {
             {
                 ft = "NvimTree",
+                filter = function(buf, win)
+                    return vim.wo[win].winfixwidth
+                end,
             },
         },
     },
