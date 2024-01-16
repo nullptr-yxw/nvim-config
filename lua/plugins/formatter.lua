@@ -3,7 +3,7 @@ return {
     config = function()
         -- Utilities for creating configurations
         local util = require("formatter.util")
-        local au = require("Utils.functions").load_autocmds
+        local au = require("utils.functions").load_autocmds
         -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
         require("formatter").setup({
             -- Enable or disable logging

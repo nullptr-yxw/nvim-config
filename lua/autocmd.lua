@@ -1,4 +1,4 @@
-local load_autocmds = require("Utils.functions").load_autocmds
+local load_autocmds = require("utils.functions").load_autocmds
 local opt = vim.opt
 local lopt = vim.opt_local
 load_autocmds("native term", {

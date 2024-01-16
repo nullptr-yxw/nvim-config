@@ -16,5 +16,5 @@ usercmd("Vh", function(t)
 end, { nargs = "?" })
 
 usercmd("Config", function()
-    require("apis").start_config()
+    require("utils.apis").start_config()
 end, { nargs = 0 })

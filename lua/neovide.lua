@@ -1,4 +1,4 @@
-local map = require("Utils.functions").map
+local map = require("utils.functions").map
 local M = {
     config = {
         o = {

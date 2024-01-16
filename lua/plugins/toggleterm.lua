@@ -3,7 +3,7 @@ return {
     enabled = true,
     config = function()
         local terminal = require("toggleterm.terminal").Terminal
-        local map = require("Utils.functions").map
+        local map = require("utils.functions").map
         require("toggleterm").setup({
             shade_terminals = false,
             persist_size = false,

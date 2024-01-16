@@ -1,5 +1,5 @@
 require("options").init()
-require("keymaps")
+require("keymaps").init()
 require("autocmd")
 require("usercmd")
 if vim.g.neovide then
