@@ -15,5 +15,4 @@ M.load_autocmds = function(group, autocmds)
         vim.api.nvim_create_autocmd(event, autocmd)
     end
 end
-
 return M

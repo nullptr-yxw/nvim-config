@@ -1,22 +1,6 @@
 return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
-    opts = {
-        -- add any global capabilities here
-        capabilities = {},
-        -- Automatically format on save
-        autoformat = true,
-        -- Enable this to show formatters used in a notification
-        -- Useful for debugging formatter issues
-        format_notify = false,
-        -- options for vim.lsp.buf.format
-        -- `bufnr` and `filter` is handled by the LazyVim formatter,
-        -- but can be also overridden when specified
-        format = {
-            formatting_options = nil,
-            timeout_ms = nil,
-        },
-    }, --todo
     config = function()
         require("mason").setup({
             ui = {
@@ -31,7 +15,7 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "bashls",
-                "clangd",
+                --"clangd",
                 "jdtls",
                 "jsonls",
                 "hls",
@@ -64,7 +48,7 @@ return {
             ["clangd"] = function()
                 lspconfig.clangd.setup({
                     cmd = {
-                        "clangd",
+                        "/bin/clangd",
                         "--header-insertion=never",
                         "--query-driver=clang++",
                         "--all-scopes-completion",
@@ -75,10 +59,10 @@ return {
             end,
         })
         vim.diagnostic.config({
-            underline = false,
-            --            update_in_insert = false,
-            virtual_text = true,
-            --            severity_sort = true,
+            -- underline = vim.g.neovide and true or false,
+            underline = true,
+            update_in_insert = false,
+            virtual_text = false,
             signs = false,
         })
         --vim.lsp.inlay_hint.enable(0, true)

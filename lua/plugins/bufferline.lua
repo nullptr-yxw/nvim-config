@@ -17,7 +17,7 @@ return {
                 middle_mouse_command = "Bdelete! %d",
                 close_command = "Bdelete! %d",
                 right_mouse_command = "vert sbuffer %d",
-                diagnostics = "false",
+                diagnostics = false,
                 offsets = {
                     {
                         filetype = "NvimTree",

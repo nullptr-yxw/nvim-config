@@ -1,10 +1,6 @@
-local myvsccolors = {}
+local M = {}
 
-myvsccolors.lightness = function(str, rate)
-    return (tonumber(str) * rate)
-end
-
-myvsccolors.get_colors = function()
+M.get_colors = function()
     return {
         None = "NONE",
         Front = "#D4D4D4",
@@ -56,6 +52,7 @@ myvsccolors.get_colors = function()
         ContextCurrent = "#707070",
 
         FoldBackground = "#202d39",
+        NvimTreeNormal = "#d9d9d0",
 
         Gray = "#808080",
         LightGray = "#a9a9a9",
@@ -87,7 +84,8 @@ myvsccolors.get_colors = function()
         MintCream = "#F5FFFA",
         Turquoise = "#40E0D0",
         LawnGreen = "#7CFC00",
+        DiagnosticUnderlineError = "#f14c4c",
     }
 end
 
-return myvsccolors
+return M

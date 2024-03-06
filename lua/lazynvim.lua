@@ -8,6 +8,8 @@ local banned_plugins = {
     "dashboard-nvim",
     "edgy.nvim",
     "formatter.nvim",
+    "hover.nvim",
+    "indent-blankline.nvim",
     "lspsaga.nvim",
     "lualine.nvim",
     "LuaSnip",
@@ -24,15 +26,17 @@ local banned_plugins = {
     "nvim-tree.lua",
     "overseer.nvim",
     "rainbow-delimiters.nvim",
-    "stickybuf.nvim",
+    --"stickybuf.nvim",
     "telescope-file-browser.nvim",
-    --"telescope.nvim",
+    "telescope.nvim",
     "toggleterm.nvim",
+    "Trans.nvim",
     "nvim-treesitter",
     "trouble.nvim",
     "vim-lastplace",
     "vscode.nvim",
     "which-key.nvim",
+
 }
 
 local M = {}

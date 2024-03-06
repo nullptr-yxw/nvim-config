@@ -6,7 +6,6 @@ return {
     },
     event = "VimEnter",
     config = function()
-        local dashboard = require("dashboard")
         require("dashboard").setup({
             theme = "doom",
             hide = {
@@ -24,7 +23,7 @@ return {
                     { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
                     { action = "qa", desc = " Quit", icon = " ", key = "q" },
                 },
-                footer = require("logo").get_poems(1),
+                footer = require("logo").get_poems(3),
             },
         })
     end,

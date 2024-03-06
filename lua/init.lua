@@ -2,6 +2,7 @@ require("options").init()
 require("keymaps").init()
 require("autocmd")
 require("usercmd")
+require("filetype").init()
 if vim.g.neovide then
     require("neovide").init()
 end
