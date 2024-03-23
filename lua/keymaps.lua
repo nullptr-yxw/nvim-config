@@ -8,6 +8,9 @@ local M = {
             ["<c-q>"] = [[<cmd>wa<cr><cmd>qa!<cr>]],
             ["<c-s>"] = [[<cmd>w<cr>]],
         },
+        n = {
+
+        },
         [{ "n", "t" }] = {
             ["<a-m>"] = [[<cmd>ToggleTerm direction=tab<cr>]],
             ["<a-n>"] = [[<cmd>ToggleTerm<cr>]],

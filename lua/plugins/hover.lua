@@ -96,7 +96,7 @@ local LSPWithDiagSource = {
                 local value = ""
                 local lineDiag = vim.diagnostic.get(0, { lnum = row })
                 for _, d in pairs(lineDiag) do
-                    if d.message then
+                    if d.col <= col and (d.end_col and d.end_col > col or true) and d.message then
                         if value ~= "" then
                             value = value .. ___
                         end
